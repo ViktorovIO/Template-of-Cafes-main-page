@@ -1,0 +1,424 @@
+/* -------------------------------------------------------------------------- */
+/*			Table of Contents			*/
+/*	0. CSS Reset  						*/
+/*	1. Documents Setup					*/
+/*	2. Site Header  					*/
+/*	3. Main Banner 						*/
+/*	4. About Us  						*/
+/*	5. Sale  							*/
+/*	6. Gallery  						*/
+/*	7. Footer 	 						*/
+
+/* -------------------------------------------------------------------------- */
+
+/*	0. CSS Reset
+/* -------------------------------------------------------------------------- */
+
+html,
+body {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+address,
+big,
+cite,
+code,
+em,
+font,
+img,
+small,
+strike,
+sub,
+sup,
+li,
+ol,
+ul,
+fieldset,
+form,
+label,
+legend,
+button,
+table,
+caption,
+tr,
+th,
+td {
+	border: none;
+	font-size: inherit;
+	line-height: inherit;
+	margin: 0;
+	padding: 0;
+	text-align: inherit;
+}
+
+blockquote::before,
+blockquote::after {
+	content: "";
+}
+
+/* -------------------------------------------------------------------------- */
+
+/*	1. Document Setup
+/* -------------------------------------------------------------------------- */
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, p {
+    font-family: 'SF UI Text';
+}
+
+header, section {
+    animation: fade-in .4s ease;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/*	2.	Site Header
+/* -------------------------------------------------------------------------- */
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #2b2b2b;
+    height: auto;
+}
+
+.header-container {
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 80px;
+}
+
+nav {
+    flex-basis: 80%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px auto;
+    list-style: none;
+}
+
+nav ul li {
+    flex-direction: row;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    background-color: #fff;
+    color: #2b2b2b;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/*	3.	Main Banner
+/* -------------------------------------------------------------------------- */
+
+.main-banner {
+    background: url("../img/banner1.jpg") center no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.main-banner-container {
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 300;
+}
+
+h2 {
+	font-size: 18px;
+    padding: 100px;
+}
+
+.main-banner__menu {
+    font-size: 18px;
+    padding: 50px;
+    background-color: rgba(43, 43, 43, 0.6);
+    border-radius: 30px;
+}
+
+.main-banner__menu h4 {
+    padding: 50px 0;
+}
+
+.main-banner__menu p {
+    font-weight: 100;
+    padding-bottom: 50px;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/*	4.	About Us
+/* -------------------------------------------------------------------------- */
+
+.about {
+    background-color: #2b2b2b;
+    color: #fff;
+}
+
+.about-container {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    padding-bottom: 100px;
+}
+
+.about-logo {
+    max-width: 150px;
+    padding: 100px;
+}
+
+.about-button {
+	text-transform: uppercase;
+	background-color: #ffffff;
+	color: #2b2b2b;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    margin: 50px auto;
+    padding: 24px 48px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/*	5.	Sale
+/* -------------------------------------------------------------------------- */
+
+.sale {
+    background-color: #fff;
+    color: #2b2b2b;
+}
+
+.sale-container {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    padding-bottom: 100px;
+}
+
+.sale-items {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sale-items__item {
+	text-align: center;
+	color: #ffffff;
+	margin: 30px;
+    width: 300px;
+    height: 200px;
+    background-color: #2b2b2b;
+}
+
+.sale-items__item p {
+	padding-top: 90px;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/*	6.	Gallery
+/* -------------------------------------------------------------------------- */
+
+.gallery {
+    background-color: #2b2b2b;
+    color: #fff;
+}
+
+.gallery-container {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    padding-bottom: 100px;
+}
+
+.gallery-items {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gallery-items__item img {
+    margin: 30px;
+    width: 300px;
+    height: 300px;
+}
+
+.gallery-items__item img:hover {
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+.popup {
+	display: none;
+	z-index: 999;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+}
+
+.popup_bg {
+	background: rgba(0,0,0,0.4);
+	position: absolute;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+}
+
+
+.popup_img {
+	position: relative;
+	z-index: 2;
+	max-height: 94%;
+	max-width: 94%;
+	margin: 1% 0 0 0;
+}
+
+.feedback {
+	background-color: #fff;
+	position: relative;
+	z-index: 2;
+	max-width: 70%;
+	max-height: 90%;
+	margin: 15%;
+}
+
+.feedback-form {
+	padding: 50px;
+}
+
+.feedback-form h2 {
+	padding: 50px;
+}
+
+.feedback-form input, .feedback-form textarea {
+	padding: 10px;
+	margin: 5px;
+	width: 80%;
+}
+
+.feedback-form input:last-child {
+	background-color: #2b2b2b;
+	color: #ffffff;
+	border: none;
+	border-radius: 0;
+	padding: 20px;
+	width: 82%;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/*	7.	Footer
+/* -------------------------------------------------------------------------- */
+
+footer {
+    background-color: #2b2b2b;
+    color: #fff;
+}
+
+footer h4 {
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+.footer-container {
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+}
+
+.footer-menu ul {
+    list-style: none;
+}
+
+.footer-menu ul li {
+    margin-bottom: 10px;
+}
+
+.footer-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.footer-menu ul li a:hover {
+    background-color: #fff;
+    color: #2b2b2b;
+}
+
+.footer-social__items {
+    height: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa {
+	color: #ffffff;
+    font-size: 20px;
+}
